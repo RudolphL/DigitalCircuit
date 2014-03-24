@@ -21,7 +21,7 @@ namespace Digital_Circuit
         private Color connectioncolor;
 
         // Constructor
-        public Connection(Boolean value, Gate startgate, Gate endgate)
+        public Connection(Gate startgate, Gate endgate)
         {
             //this.value = startgate.MyOutputValue;
             this.startgate = startgate;
@@ -30,6 +30,38 @@ namespace Digital_Circuit
         }
 
         // Properties
+
+        public Boolean Value 
+        {
+            get { return value; }
+        }
+
+        public int StartX 
+        {
+            get { return startX; }
+        }
+
+        public int StartY 
+        {
+            get { return startY; }
+        }
+        public int EndX
+        {
+            get { return endX; }
+        }
+        public int EndY
+        {
+            get { return endY; }
+        }
+        public Gate Startgate
+        {
+            get { return startgate; }
+        }
+
+        public Gate Endgate
+        {
+            get { return endgate; }
+        }
 
         // Methods
 
@@ -41,16 +73,17 @@ namespace Digital_Circuit
         /// <returns></returns>
         public bool ContainsPoint(int xmouse, int ymouse)
         {
-            return true;
+            
         }
-
         /// <summary>
         /// Draws a connection on it's location
         /// </summary>
         /// <param name="gr"></param>
         public void DrawConnection(Graphics gr)
         {
-            return;
+            gr.DrawLine(Pens.Black, startX, startY, endX, endY);
+           
+
         }
     }
 }
