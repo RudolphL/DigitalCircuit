@@ -30,7 +30,7 @@ namespace Digital_Circuit
         /// <returns></returns>
         public List<Gate> GetAllGates()
         {
-            return null;
+            return gates;
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace Digital_Circuit
         /// <returns></returns>
         public List<Connection> GetAllConnections()
         {
-            return null;
+            return connections;
         }
 
         /// <summary>
@@ -50,6 +50,13 @@ namespace Digital_Circuit
         /// <returns>Return gate if found, else return null</returns>
         public Gate GetGate(int xmouse, int ymouse)
         {
+            foreach (Gate gate in gates)
+            {
+                if(gate.ContainsPoint(xmouse, ymouse))
+                {
+                    return gate;
+                }
+            }
             return null;
         }
 
@@ -61,6 +68,13 @@ namespace Digital_Circuit
         /// <returns>returns connection if found, else null</returns>
         public Connection GetConnection(int xmouse, int ymouse)
         {
+            foreach (Connection connection in connections)
+            {
+                if (connection.ContainsPoint(xmouse, ymouse))
+                {
+                    return connection;
+                }
+            }
             return null;
         }
 
@@ -70,45 +84,52 @@ namespace Digital_Circuit
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns>Return true if succesful</returns>
-        public bool AddGate(int x, int y)
+        public void AddGate(int x, int y)
         {
-            return true;
+            Gate tempGate = GetGate(x,y);
+            if(tempGate != null)
+            {
+                gates.Remove(tempGate);
+            }
+            gates.Add(new Gate(x, y));
         }
 
+        // Changed from bool to void
         /// <summary>
         /// Adds a connection between two gates
         /// </summary>
-        /// <param name="xstart"></param>
-        /// <param name="ystart"></param>
-        /// <param name="xend"></param>
-        /// <param name="yend"></param>
-        /// <returns>Return true if succesful</returns>
-        public bool AddConnection(Gate startgate, Gate endgate)
+        /// <param name="startgate"></param>
+        /// <param name="endgate"></param>
+        public void AddConnection(Gate startgate, Gate endgate)
         {
-            return true;
+            //Connection tempConnection = new Connection(startgate, endgate);
+            //connections.Add(tempConnection);
         }
 
+        // Changed from bool to void
         /// <summary>
         /// Removes a gate from the list of gates.
         /// If the gate has connections to it, these will be deleted too.
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns>Returns true if succesful</returns>
-        public bool RemoveGate(Gate currentgate)
+        /// <param name="currentgate"></param>
+        public void RemoveGate(Gate currentgate)
         {
-            return true;
+            List<Connection> connectionsToRemove = new List<Connection>();
+            //connectionsToRemove = currentgate.myConnections;
+            foreach (Connection connection in connectionsToRemove)
+            {
+                connections.Remove(connection);
+            }
         }
 
+        // Changed from bool to void
         /// <summary>
         /// Removes a connection from the list of connections.
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <returns>Returns true if succesful</returns>
-        public bool RemoveConnection(Connection currentconnection)
+        /// <param name="currentconnection"></param>
+        public void RemoveConnection(Connection currentconnection)
         {
-            return true;
+            connections.Remove(currentconnection);
         }
 
         /// <summary>

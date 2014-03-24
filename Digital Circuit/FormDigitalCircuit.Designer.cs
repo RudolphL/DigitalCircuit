@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDigitalCircuit));
             this.gbTools = new System.Windows.Forms.GroupBox();
             this.rbRemove = new System.Windows.Forms.RadioButton();
@@ -47,6 +48,7 @@
             this.helpToolStripButton = new System.Windows.Forms.ToolStripSplitButton();
             this.aboutToolStripButton = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.gbTools.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -252,6 +254,12 @@
             this.panel1.Size = new System.Drawing.Size(1212, 763);
             this.panel1.TabIndex = 16;
             // 
+            // imageList
+            // 
+            this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList.ImageSize = new System.Drawing.Size(20, 20);
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // FormDigitalCircuit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,6 +301,7 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ImageList imageList;
     }
 }
 

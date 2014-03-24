@@ -19,7 +19,7 @@ namespace Digital_Circuit
         // Delegates and events
 
         // Constructor
-        public Gate(int id, int x, int y)
+        public Gate(int x, int y)
         {
             this.x = x;
             this.y = y;
