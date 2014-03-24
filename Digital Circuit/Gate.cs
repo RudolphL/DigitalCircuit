@@ -29,10 +29,19 @@ namespace Digital_Circuit
         }
 
         // Properties
+        public int X
+        {
+            get { return this.x; }
+        }
 
+        public int Y
+        {
+            get { return this.y; }
+        }
 
 
         // Methods
+
 
         /// <summary>
         /// checks if the point (xmouse,ymouse) is on this gate.
