@@ -47,10 +47,11 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripSplitButton();
             this.aboutToolStripButton = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.pbWorkspace = new System.Windows.Forms.PictureBox();
             this.gbTools.SuspendLayout();
             this.toolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWorkspace)).BeginInit();
             this.SuspendLayout();
             // 
             // gbTools
@@ -246,28 +247,28 @@
             this.aboutToolStripButton.Size = new System.Drawing.Size(139, 32);
             this.aboutToolStripButton.Text = "About";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.Location = new System.Drawing.Point(258, 78);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 763);
-            this.panel1.TabIndex = 16;
-            // 
             // imageList
             // 
             this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList.ImageSize = new System.Drawing.Size(20, 20);
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // pbWorkspace
+            // 
+            this.pbWorkspace.Location = new System.Drawing.Point(258, 67);
+            this.pbWorkspace.Name = "pbWorkspace";
+            this.pbWorkspace.Size = new System.Drawing.Size(1212, 774);
+            this.pbWorkspace.TabIndex = 16;
+            this.pbWorkspace.TabStop = false;
+            // 
             // FormDigitalCircuit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 853);
+            this.Controls.Add(this.pbWorkspace);
             this.Controls.Add(this.btCleargrid);
             this.Controls.Add(this.toolStrip);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbTools);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -276,6 +277,7 @@
             this.gbTools.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWorkspace)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,7 +288,6 @@
         private System.Windows.Forms.GroupBox gbTools;
         private System.Windows.Forms.Button btCleargrid;
         private System.Windows.Forms.ToolStrip toolStrip;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripSplitButton helpToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripButton;
         private System.Windows.Forms.RadioButton rbRemove;
@@ -302,6 +303,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.PictureBox pbWorkspace;
     }
 }
 
