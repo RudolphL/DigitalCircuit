@@ -73,7 +73,7 @@ namespace Digital_Circuit
         /// <returns></returns>
         public bool ContainsPoint(int xmouse, int ymouse)
         {
-            return true;   
+            
         }
         /// <summary>
         /// Draws a connection on it's location

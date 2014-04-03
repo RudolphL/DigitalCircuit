@@ -14,7 +14,7 @@ namespace Digital_Circuit
 
         // Constructor
         public AndGate(int id, int x, int y)
-            :base(x, y)
+            :base(id, x, y)
         {
         }
 

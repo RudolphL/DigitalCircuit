@@ -12,7 +12,7 @@ namespace Digital_Circuit
 
         // Constructor
         public SinkGate(int id, int x, int y)
-            :base(x, y)
+            :base(id, x, y)
         {
         }
 
