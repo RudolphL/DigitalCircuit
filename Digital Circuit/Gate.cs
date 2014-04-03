@@ -51,7 +51,14 @@ namespace Digital_Circuit
         /// <returns>Returns true or false</returns>
         public bool ContainsPoint(int xmouse, int ymouse)
         {
-            return true;
+            if (this.x - 10 <= xmouse && xmouse <= this.x + 10 && this.y - 10 <= ymouse && ymouse <= this.y + 10)
+            {
+                
+                   return true;
+                
+               
+            }
+            return false;
         }
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace Digital_Circuit
         /// <param name="gr"></param>
         public void DrawGate(Graphics gr)
         {
+            
             return;
         }
     }
