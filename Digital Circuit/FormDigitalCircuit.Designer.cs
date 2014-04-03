@@ -249,9 +249,15 @@
             // 
             // imageList
             // 
-            this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList.ImageSize = new System.Drawing.Size(20, 20);
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "andgate.png");
+            this.imageList.Images.SetKeyName(1, "notgate.png");
+            this.imageList.Images.SetKeyName(2, "orgate.png");
+            this.imageList.Images.SetKeyName(3, "sinkoff.png");
+            this.imageList.Images.SetKeyName(4, "sinkon.png");
+            this.imageList.Images.SetKeyName(5, "sourceoff.png");
+            this.imageList.Images.SetKeyName(6, "sourceon.png");
             // 
             // pbWorkspace
             // 
